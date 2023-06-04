@@ -6,6 +6,7 @@ def get_player_choice(valid_inputs: tuple, prompt: str) -> str:
     :param prompt: a string for prompting the user
     :precondition: acceptable_choices must be a tuple
     :precondition: acceptable_choices must only contain strings
+    :precondition: prompt must be a string
     :postcondition: takes valid user input
     :return: the valid user input as a string
     :raises TypeError: if valid_inputs is not a tuple
