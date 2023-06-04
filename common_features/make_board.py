@@ -9,7 +9,7 @@ def make_board_numbered(rows: int, columns: int) -> dict:
     :precondition: columns must be an integer
     :precondition: columns must be positive
     :postcondition: creates a dictionary with coordinates as the keys and empty brackets as the values
-    :return: creates a dictionary with coordinates as the keys and empty brackets as the values
+    :return: a dictionary with coordinates as the keys and empty brackets as the values
     :raises TypeError: if rows is not an integer
     :raises TypeError: if columns is not an integer
     :raises ValueError: if rows is not positive
