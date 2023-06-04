@@ -28,7 +28,6 @@ def make_board_numbered(rows: int, columns: int) -> dict:
     return {(row, column): "[ ]" for row in range(1, rows + 1) for column in range(1, columns + 1)}
 
 
-
 def main():
     """
     Drive the program.
