@@ -26,10 +26,10 @@ def check_column_full(board: dict, chosen_column: int, rows: int) -> bool:
     >>> check_column_full(test_board_empty, 2, 3)
     True
     """
-    if type(chosen_column) is not int or type(rows) is not int:
-        raise TypeError("The chosen column and number of rows must both be integers")
     if type(board) is not dict:
         raise TypeError("The board must be represented with a dictionary.")
+    if type(chosen_column) is not int or type(rows) is not int:
+        raise TypeError("The chosen column and number of rows must both be integers")
     if rows < 0:
         raise ValueError("The number of rows must be positive")
     for row in range(1, rows + 1):
