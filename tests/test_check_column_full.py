@@ -1,5 +1,5 @@
 from unittest import TestCase
-from connect_four.choice_validation.check_column_full import check_column_full
+from connect_four.player_choice.check_column_full import check_column_full
 
 
 class TestCheckColumnFull(TestCase):

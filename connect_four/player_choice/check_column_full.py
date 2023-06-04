@@ -22,7 +22,7 @@ def check_column_full(board: dict, chosen_column: int, rows: int) -> bool:
     >>> check_column_full(test_board_empty, 2, 2)
     True
     >>> test_board_mix = {(1, 1): '[ ]', (1, 2): '[O]', (1, 3): '[O]', (2, 1): '[O]', (2, 2): '[O]', (2, 3): '[ ]',
-    ... (3, 1): '[ ]', (3, 2): '[O]', (3, 3): '[O]',}
+    ... (3, 1): '[ ]', (3, 2): '[O]', (3, 3): '[O]'}
     >>> check_column_full(test_board_empty, 2, 3)
     True
     """
