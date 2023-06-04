@@ -34,3 +34,14 @@ def check_column_full(board: dict, chosen_column: int, rows: int) -> bool:
         if board.get((row, chosen_column)) == "[ ]":
             return False
     return True
+
+
+def main():
+    """
+    Drive the program.
+    """
+    print("Welcome to the module")
+
+
+if __name__ == "__main__":
+    main()
