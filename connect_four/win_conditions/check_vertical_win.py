@@ -16,13 +16,17 @@ def check_vertical_win(board: dict, chosen_column: int, rows: int) -> bool:
     :raises TypeError: if chosen_column is not an integer
     :raises TypeError: if rows is not an integer
     :raises ValueError: if rows is not positive
-    >>> test_board_win = {(1, 1): '[0]', (1, 2): '[ ]', (2, 1): '[0]', (2, 2): '[ ]', (3, 1): '[0]',
-    ... (3, 2): '[ ]', (4, 1): '[0]', (4, 2): '[ ]'}
-    >>> check_vertical_win(test_board_win, 1, 3)
+    >>> test_board_win = {(1, 1): '[O]', (1, 2): '[ ]', (2, 1): '[O]', (2, 2): '[ ]', (3, 1): '[O]',
+    ... (3, 2): '[ ]', (4, 1): '[O]', (4, 2): '[ ]'}
+    >>> check_vertical_win(test_board_win, 1, 4)
     True
     >>> test_board_no_win = {(1, 1): '[ ]', (1, 2): '[ ]', (2, 1): '[0]', (2, 2): '[ ]', (3, 1): '[0]',
     ... (3, 2): '[ ]', (4, 1): '[0]', (4, 2): '[ ]'}
-    >>> check_vertical_win(test_board_no_win, 1, 3)
+    >>> check_vertical_win(test_board_no_win, 1, 4)
+    False
+    >>> test_board_not_enough_rows = {(1, 1): '[ ]', (1, 2): '[ ]', (2, 1): '[0]', (2, 2): '[ ]', (3, 1): '[0]',
+    ... (3, 2): '[ ]'}
+    >>> check_vertical_win(test_board_not_enough_rows, 1, 3)
     False
     """
     if type(board) is not dict:
@@ -33,10 +37,11 @@ def check_vertical_win(board: dict, chosen_column: int, rows: int) -> bool:
         raise ValueError("The number of rows must be positive")
     current_symbol = "[ ]"
     for row in sorted(range(1, rows + 1), reverse=True):
-        if board.get((row, chosen_column)) != current_symbol:
-            current_symbol = board.get((row, chosen_column))
+        current_space = board.get((row, chosen_column))
+        if current_space != current_symbol:
+            current_symbol = current_space
             counter = 1
-        if board.get((row, chosen_column)) == current_symbol and board.get((row, chosen_column)) is not None:
+        elif current_space == current_symbol and current_space is not None and current_space != "[ ]":
             counter += 1
             if counter == 4:
                 return True
