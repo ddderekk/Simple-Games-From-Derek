@@ -47,3 +47,6 @@ class TestCheckVerticalWin(TestCase):
         test_board = {(1, 1): '[ ]', (1, 2): '[O]', (2, 1): '[ ]', (2, 2): '[O]', (3, 1): '[ ]',
                       (3, 2): '[O]', (4, 1): '[O]', (4, 2): '[O]'}
         self.assertFalse(check_vertical_win(board=test_board, chosen_column=1, rows=8))
+
+    def test_check_vertical_win_board_empty_dict(self):
+        self.assertFalse(check_vertical_win(board={}, chosen_column=4, rows=4))

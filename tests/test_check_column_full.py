@@ -42,3 +42,6 @@ class TestCheckColumnFull(TestCase):
     def test_check_column_full_column_full_and_chosen(self):
         test_board = {(1, 1): "[0]", (1, 2): "[ ]", (2, 1): "[0]", (2, 2): "[ ]"}
         self.assertTrue(check_column_full(test_board, chosen_column=1, rows=2))
+
+    def test_check_column_full_board_empty_dict(self):
+        self.assertTrue(check_column_full(board={}, chosen_column=1, rows=2))

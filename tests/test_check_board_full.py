@@ -19,3 +19,6 @@ class TestCheckBoardFull(TestCase):
 
     def test_check_board_full_board_is_not_full(self):
         self.assertFalse(check_board_full({(1, 1): "[\033[31mO\033[37m]", (1, 2): "[ ]"},  "[ ]"))
+
+    def test_check_board_empty_dict_board(self):
+        self.assertTrue(check_board_full({},  "[ ]"))

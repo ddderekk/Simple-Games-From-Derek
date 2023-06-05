@@ -50,3 +50,9 @@ class TestFindOpenSpace(TestCase):
         expected_result = (1, 1)
         actual_result = find_open_space(board=test_board_full, chosen_column=1, rows=5)
         self.assertEqual(expected_result, actual_result)
+
+    def test_find_open_space_board_empty_dict(self):
+        test_board_full = {}
+        expected_result = ()
+        actual_result = find_open_space(board=test_board_full, chosen_column=1, rows=5)
+        self.assertEqual(expected_result, actual_result)
