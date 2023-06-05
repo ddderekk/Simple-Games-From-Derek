@@ -1,5 +1,5 @@
 from unittest import TestCase
-from connect_four.show_player.show_column_headers import show_column_headers
+from common_features.show_column_headers import show_column_headers
 from unittest.mock import patch
 import io
 
