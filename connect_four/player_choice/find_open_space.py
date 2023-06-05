@@ -35,6 +35,7 @@ def find_open_space(board: dict, chosen_column: int, rows: int) -> tuple:
     for row in sorted(range(1, rows + 1), reverse=True):
         if board.get((row, chosen_column)) == "[ ]":
             return row, chosen_column
+    return ()
 
 
 def main():
