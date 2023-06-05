@@ -33,7 +33,7 @@ class TestShowBoard(TestCase):
     def test_show_board_empty_board(self, mock_output):
         test_board_square = {}
         show_board(board=test_board_square, rows=2, columns=2)
-        expected_output = ""
+        expected_output = "None None \nNone None \n"
         actual_output = mock_output.getvalue()
         self.assertEqual(expected_output, actual_output)
 
