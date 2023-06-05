@@ -10,7 +10,7 @@ def check_horizontal_win(board: dict, chosen_row: int, columns: int) -> bool:
     :precondition: columns must be an integer
     :precondition: columns must be positive
     :precondition: columns must be equal to the number of the rows on the game board
-    :postcondition: checks if four adjacent spaces in a row on the game board are all the same
+    :postcondition: checks if four adjacent spaces in a column on the game board are all the same and not the default
     :return: True if four adjacent spaces in a row on the game board are all the same and not the default, else false
     :raises TypeError: if board is not a dictionary
     :raises TypeError: if chosen_row is not an integer
