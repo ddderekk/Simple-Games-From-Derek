@@ -9,6 +9,7 @@ def find_open_space(board: dict, chosen_column: int, rows: int) -> tuple:
     :precondition: chosen_column must be an integer
     :precondition: rows must be an integer
     :precondition: rows must be positive
+    :precondition: rows must be equal to the number of the rows on the game board
     :postcondition: finds first open space on the board in the desired column
     :return: a tuple that represents the first open space on the board in the desired column
     :raises TypeError: if board is not a dictionary

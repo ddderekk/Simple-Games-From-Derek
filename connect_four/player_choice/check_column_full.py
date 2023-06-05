@@ -9,6 +9,7 @@ def check_column_full(board: dict, chosen_column: int, rows: int) -> bool:
     :precondition: chosen_column must be an integer
     :precondition: rows must be an integer
     :precondition: rows must be positive
+    :precondition: rows must be equal to the number of the rows on the game board
     :postcondition: checks if the column on the board is full
     :return: True if the column on the board is full, else false
     :raises TypeError: if board is not a dictionary
