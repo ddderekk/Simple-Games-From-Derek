@@ -36,6 +36,7 @@ def check_vertical_win(board: dict, chosen_column: int, rows: int) -> bool:
     if rows < 0:
         raise ValueError("The number of rows must be positive")
     current_symbol = "[ ]"
+    counter = 0
     for row in sorted(range(1, rows + 1), reverse=True):
         current_space = board.get((row, chosen_column))
         if current_space != current_symbol:

@@ -36,6 +36,7 @@ def check_diagonal_win_down(board: dict, row: int, column: int) -> bool:
         raise TypeError("The chosen column and number of columns must both be integers")
     current_symbol = "[ ]"
     increment = 6
+    counter = 0
     while increment > -7:
         increment -= 1
         next_symbol = board.get((row - increment, column - increment))
@@ -88,6 +89,7 @@ def check_diagonal_win_up(board: dict, row: int, column: int) -> bool:
         raise TypeError("The chosen column and number of columns must both be integers")
     current_symbol = "[ ]"
     increment = 0
+    counter = 0
     while increment < 7:
         increment += 1
         next_symbol = board.get((row - 6 + increment, column + 6 - increment))

@@ -36,6 +36,7 @@ def check_horizontal_win(board: dict, chosen_row: int, columns: int) -> bool:
     if columns < 0:
         raise ValueError("The number of columns must be positive")
     current_symbol = "[ ]"
+    counter = 0
     for column in range(1, columns + 1):
         current_space = board.get((chosen_row, column))
         if current_space != current_symbol:
