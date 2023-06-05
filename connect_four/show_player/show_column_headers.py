@@ -10,17 +10,18 @@ def show_column_headers(columns: int) -> None:
     :raises ValueError: if columns is not positive
     >>> show_column_headers(5) # doctest: +NORMALIZE_WHITESPACE
      1   2   3   4   5
-    >>> show_column_headers(0) # doctest: +NORMALIZE_WHITESPACE
-
     >>> show_column_headers(1) # doctest: +NORMALIZE_WHITESPACE
      1
+    >>> show_column_headers(0) # doctest: +NORMALIZE_WHITESPACE
+
     """
     if type(columns) is not int:
         raise TypeError("The number of columns must be an integer.")
     if columns < 0:
         raise ValueError("The number of columns must be positive")
     for column in range(1, columns + 1):
-        print(f" {str(column)} ", end=' ')
+        print(f" {str(column)} ", end=" ")
+    print()
 
 
 def main():
