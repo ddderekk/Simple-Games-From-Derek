@@ -32,7 +32,7 @@ def check_horizontal_win(board: dict, chosen_row: int, columns: int) -> bool:
     if type(board) is not dict:
         raise TypeError("The board must be represented with a dictionary.")
     if type(chosen_row) is not int or type(columns) is not int:
-        raise TypeError("The chosen column and number of columns must both be integers")
+        raise TypeError("The chosen row and number of columns must both be integers")
     if columns < 0:
         raise ValueError("The number of columns must be positive")
     current_symbol = "[ ]"
