@@ -90,10 +90,10 @@ def check_diagonal_win_up(board: dict, row: int, column: int) -> bool:
     current_symbol = "[ ]"
     increment = 0
     counter = 0
-    while increment < 7:
+    while increment < 16:
         increment += 1
-        next_symbol = board.get((row - 6 + increment, column + 6 - increment))
-        if (row - 6 + increment, column + 6 - increment) in board.keys():
+        next_symbol = board.get((row - 7 + increment, column + 7 - increment))
+        if (row - 7 + increment, column + 7 - increment) in board.keys():
             if next_symbol != current_symbol:
                 current_symbol = next_symbol
                 counter = 1
