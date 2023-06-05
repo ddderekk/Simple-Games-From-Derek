@@ -11,7 +11,7 @@ def check_vertical_win(board: dict, chosen_column: int, rows: int) -> bool:
     :precondition: rows must be positive
     :precondition: rows must be equal to the number of the rows on the game board
     :postcondition: checks if four adjacent spaces in a column on the game board are all the same
-    :return: True if four adjacent spaces in a column on the game board are all the same, else false
+    :return: True if four adjacent spaces in a column on the game board are all the same and not the default, else false
     :raises TypeError: if board is not a dictionary
     :raises TypeError: if chosen_column is not an integer
     :raises TypeError: if rows is not an integer
