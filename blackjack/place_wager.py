@@ -32,7 +32,6 @@ def main():
     Drive the program.
     """
     print("Welcome to the module")
-    place_wager(500)
 
 
 if __name__ == "__main__":
