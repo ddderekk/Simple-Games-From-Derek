@@ -1,6 +1,6 @@
 def show_hand(hand: list) -> list:
     """
-    Print the hand of cards being examined.
+    Convert the hand of cards being examined into a string form.
 
     :param hand: a list representing the hand dealt to the player or the dealer
     :precondition: hand must be a list
@@ -8,8 +8,8 @@ def show_hand(hand: list) -> list:
     :precondition: the length of hand must be 2
     :precondition: each item in hand must have a key called name
     :precondition: each item in hand must have a key called value
-    :postcondition: checks if hand has a dictionary with the name Ace and a dictionary with the value 10
-    :return: True if hand has a dictionary with the name Ace and a dictionary with the value 10, else False
+    :postcondition: converts data for each card into a string
+    :return: a list of strings that describe the name and suite of each card in the hand
     :raises TypeError: if hand is not a list
     :raises TypeError: if hand has an element that is not a dictionary
     >>> test_hand_one_card = [{"name": "Ace", "suite": "Spades"}]
