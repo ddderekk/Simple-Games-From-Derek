@@ -12,7 +12,7 @@ def place_wager(limit: int) -> int:
     """
     if type(limit) is not int:
         raise TypeError("The limit must be an integer")
-    if limit <= 1:
+    if limit < 1:
         raise ValueError("The limit must be at least 1.")
     wager = "-1"
     is_number = False
