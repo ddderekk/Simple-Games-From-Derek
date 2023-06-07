@@ -7,8 +7,8 @@ def sum_non_aces(hand: list) -> int:
     :precondition: hand must only contain dictionaries
     :precondition: each item in hand must have a key called value
     :precondition: the value for the key called value in each item must be an integer
-    :postcondition: sums the values of the key called value from all elements in hand
-    :return: the sum of the values for the key called value from all elements in hand as an integer
+    :postcondition: sums the values of the key called value from all elements in hand that are not Aces
+    :return: the sum of the values for the key called value from all elements in hand that are not Aces as an integer
     :raises TypeError: if hand is not a list
     :raises TypeError: if hand has an element that is not a dictionary
     :raises TypeError: if the value for the key called value in each element is not an integer
