@@ -1,10 +1,10 @@
-def create_deck() -> list:
+def create_deck_war() -> list:
     """
     Create a deck of cards not including jokers where face cards are not all 10.
 
     :postcondition: creates a deck of cards as a list not including jokers where face cards are not all 10
     :return: a list of dictionaries for each card in a deck not including jokers where face cards are not all 10
-    >>> create_deck() # doctest: +NORMALIZE_WHITESPACE
+    >>> create_deck_war() # doctest: +NORMALIZE_WHITESPACE
     [{'name': 'Ace', 'suite': 'Spades', 'value': 1}, {'name': 'Ace', 'suite': 'Clubs', 'value': 1},
     {'name': 'Ace', 'suite': 'Diamonds', 'value': 1}, {'name': 'Ace', 'suite': 'Hearts', 'value': 1},
     {'name': '2', 'suite': 'Spades', 'value': 2}, {'name': '2', 'suite': 'Clubs', 'value': 2},
