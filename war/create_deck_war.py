@@ -42,7 +42,7 @@ def create_deck_war() -> list:
             if name == "Ace":
                 card["value"] = 1
             elif name in ("Jack", "Queen", "King"):
-                card["value"] = face_values[name]
+                card["value"] = face_values.get(name)
             else:
                 card["value"] = int(name)
             deck.append(card)
