@@ -6,7 +6,8 @@ from common_features.get_player_choice import get_player_choice
 def blackjack() -> None:
     print("Play until you run out of money or get bored."
           " Maybe show your friends how much virtual money you won."
-          " The option to double down or split pairs is not available.\n")
+          " The option to double down or split pairs is not available."
+          " Insurance will only be offered when you wager more than $1.\n")
     deck = create_deck.create_deck()
     random.shuffle(deck)
     player_money = 500
@@ -20,7 +21,7 @@ def blackjack() -> None:
         dealer_hand = [deck.pop(), deck.pop()]
         insurance = False
         insurance_wager = 0
-        if dealer_hand[0]["name"] == "Ace":
+        if dealer_hand[0]["name"] == "Ace" and wager > 1:
             print("The dealer's face-up card is an Ace.")
             insurance_choice = get_player_choice(("Y", "y", "N", "n"), "Do you want to take Insurance?(Y/N)")
             if insurance_choice == "Y" or insurance_choice == "y":
