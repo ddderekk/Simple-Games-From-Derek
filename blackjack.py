@@ -96,7 +96,7 @@ def blackjack() -> None:
                           f"The dealer's hand was {show_hand.show_hand(dealer_hand)}. Total:{dealer_hand_total}\n"
                           f"Here's your money back.")
             else:
-                print(f"Your hand is {show_hand.show_hand(player_hand)}."
+                print(f"\nYour hand is {show_hand.show_hand(player_hand)}."
                       f"\n Total: {sum_non_aces.sum_non_aces(player_hand) + sum_aces.sum_aces(player_hand)}\n"
                       f"Your hand is a bust. You lose ${wager}.\n")
     print("You're out of money!")
