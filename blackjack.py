@@ -33,7 +33,7 @@ def blackjack() -> None:
             player_money += int(1.5 * wager)
         elif not check_natural.check_natural(player_hand) and check_natural.check_natural(dealer_hand):
             print(f"\nThe dealer got a Blackjack! The dealer's hand was {show_hand.show_hand(dealer_hand)}."
-                  f" \nYour hand was {show_hand.show_hand(player_hand)}.")
+                  f" \nYour hand was {show_hand.show_hand(player_hand)}.\nYou lose ${wager},")
             player_money -= wager
             if insurance:
                 player_money += 2 * insurance_wager
