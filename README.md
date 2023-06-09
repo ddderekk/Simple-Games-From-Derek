@@ -1,5 +1,8 @@
 # Simple-Games-From-Derek
-
+## Current Games:
+- Connect 4
+- Blackjack
+- War(card game)
 ## How to play:
 - Have Python installed
 - Go to the directory where these files are located from your terminal
