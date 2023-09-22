@@ -68,7 +68,6 @@ def blackjack() -> None:
                           f"\n Total: {sum_non_aces.sum_non_aces(player_hand) + sum_aces.sum_aces(player_hand)}")
                 elif sum_non_aces.sum_non_aces(player_hand) + sum_aces.sum_aces(player_hand) > 21:
                     continue_drawing = False
-                    player_money -= wager
 
             if sum_non_aces.sum_non_aces(player_hand) + sum_aces.sum_aces(player_hand) <= 21:
                 while sum_non_aces.sum_non_aces(dealer_hand) + sum_aces.sum_aces(dealer_hand) < 17:
@@ -100,6 +99,7 @@ def blackjack() -> None:
                 print(f"\nYour hand is {show_hand.show_hand(player_hand)}."
                       f"\n Total: {sum_non_aces.sum_non_aces(player_hand) + sum_aces.sum_aces(player_hand)}\n"
                       f"Your hand is a bust. You lose ${wager}.\n")
+                player_money -= wager
     print("You're out of money!")
 
 
